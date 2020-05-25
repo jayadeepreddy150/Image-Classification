@@ -59,3 +59,5 @@ model.add(GlobalAveragePooling2D())
 model.add(Dense(512, activation='relu'))
 model.add(Dense(2,activation='softmax'))
 model.compile(optimizer='adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
+
+hist = model.fit(x_train,y1_train,batch_size = 16, epochs = 5, verbose=1, validation_split=0.2)
